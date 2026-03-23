@@ -836,7 +836,7 @@
       <p class="welcome-countdown" id="wCountdown">Auto-continuing in <strong id="wSec">4</strong>s</p>
 
       <div class="welcome-stats">
-        <div class="w-stat"><strong>2,400+</strong><span>Places</span></div>
+        <div class="w-stat"><strong>135+</strong><span>Places</span></div>
         <div class="w-stat"><strong>28</strong><span>States</span></div>
         <div class="w-stat"><strong>4.8★</strong><span>Rating</span></div>
         <div class="w-stat"><strong>180K</strong><span>Travellers</span></div>
@@ -1005,8 +1005,10 @@
             <button class="cat-pill" data-cat="Temples"   onclick="selectCategory(this,'Temples')">&#9961; Temples</button>
             <button class="cat-pill" data-cat="Wildlife"  onclick="selectCategory(this,'Wildlife')">&#127807; Wildlife</button>
             <button class="cat-pill" data-cat="Lakes"     onclick="selectCategory(this,'Lakes')">&#127966; Lakes</button>
+            <button class="cat-pill" data-cat="Waterfalls" onclick="selectCategory(this,'Waterfalls')">&#127754; Waterfalls</button>
+            <button class="cat-pill" data-cat="Heritage"   onclick="selectCategory(this,'Heritage')">&#127963; Heritage</button>
           </div>
-          <span id="liveCounter">&#9889; <span id="liveCount">27</span> places found</span>
+          <span id="liveCounter">&#9889; <span id="liveCount">138</span> places found</span>
         </div>
 
         <!-- Row 3: Advanced filters toggle + recent searches -->
@@ -1375,6 +1377,7 @@
               </div>
               <span class="cost-num text-lg font-black text-white" id="val-travel">₹500</span>
             </div>
+            <p id="travel-note" class="text-[8px] text-slate-500 uppercase tracking-widest pl-14 -mt-3 italic">Calculated based on distance</p>
 
             <div class="flex items-center justify-between p-4 rounded-2xl bg-white/5 border border-white/5 hover:border-orange-500/30 transition-colors">
               <div class="flex items-center gap-3">
@@ -1973,7 +1976,84 @@
       id: 61, name: "Pataleshwar Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 19.1000, lng: 83.5167,
       description: "An ancient shrine at Paikapada near Rayagada, known for its unique subterranean sanctum.",
       image_url: "https://images.unsplash.com/photo-1590715364177-3e1d16616056?w=800"
-    }
+    },
+    { id: 101, name: "Jagannath Temple", state: "Odisha", category: "Temples", rating: 5.0, lat: 19.8047, lng: 85.8174, description: "One of the Char Dham pilgrimage sites, famous for Rath Yatra.", image_url: "https://images.unsplash.com/photo-1588416499018-6d8c9c1c1c6e?w=800" },
+    { id: 102, name: "Konark Sun Temple", state: "Odisha", category: "Temples", rating: 4.9, lat: 19.8876, lng: 86.0945, description: "UNESCO site shaped like a giant chariot.", image_url: "https://images.unsplash.com/photo-1599661046289-e31897846e41?w=800" },
+    { id: 103, name: "Lingaraj Temple", state: "Odisha", category: "Temples", rating: 4.8, lat: 20.2376, lng: 85.8333, description: "Ancient Shiva temple with Kalinga architecture.", image_url: "https://images.unsplash.com/photo-1627374622163-0d94d55bdac5?w=800" },
+    { id: 104, name: "Mukteshwar Temple", state: "Odisha", category: "Temples", rating: 4.8, lat: 20.2490, lng: 85.8330, description: "Gem of Odisha architecture.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 105, name: "Rajarani Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 20.2500, lng: 85.8333, description: "Known for sandstone carvings.", image_url: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800" },
+    { id: 106, name: "Puri Beach", state: "Odisha", category: "Beaches", rating: 4.7, lat: 19.7983, lng: 85.8245, description: "Popular beach with sunrise views.", image_url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" },
+    { id: 107, name: "Chandrabhaga Beach", state: "Odisha", category: "Beaches", rating: 4.8, lat: 19.8968, lng: 86.1071, description: "Clean beach near Konark.", image_url: "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=800" },
+    { id: 108, name: "Gopalpur Beach", state: "Odisha", category: "Beaches", rating: 4.6, lat: 19.2586, lng: 84.9130, description: "Peaceful coastal town.", image_url: "https://images.unsplash.com/photo-1473186578172-c141e6798cf4?w=800" },
+    { id: 109, name: "Chilika Lake", state: "Odisha", category: "Lakes", rating: 4.9, lat: 19.8450, lng: 85.4788, description: "Largest brackish lagoon in Asia.", image_url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" },
+    { id: 110, name: "Hirakud Dam", state: "Odisha", category: "Lakes", rating: 4.7, lat: 21.5183, lng: 83.8728, description: "One of the longest dams in the world.", image_url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" },
+    { id: 111, name: "Simlipal National Park", state: "Odisha", category: "Wildlife", rating: 4.8, lat: 21.9500, lng: 86.3500, description: "Tiger reserve with waterfalls.", image_url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800" },
+    { id: 112, name: "Bhitarkanika National Park", state: "Odisha", category: "Wildlife", rating: 4.9, lat: 20.7000, lng: 86.9000, description: "Famous for crocodiles.", image_url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800" },
+    { id: 113, name: "Deomali Hills", state: "Odisha", category: "Mountains", rating: 4.9, lat: 18.6500, lng: 82.9500, description: "Highest peak of Odisha.", image_url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+    { id: 114, name: "Daringbadi", state: "Odisha", category: "Mountains", rating: 4.6, lat: 19.9067, lng: 84.1236, description: "Kashmir of Odisha.", image_url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+    { id: 115, name: "Khandadhar Waterfall", state: "Odisha", category: "Waterfalls", rating: 4.8, lat: 21.8500, lng: 85.1000, description: "One of the highest waterfalls.", image_url: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800" },
+    { id: 116, name: "Barehipani Waterfall", state: "Odisha", category: "Waterfalls", rating: 4.9, lat: 21.9333, lng: 86.3833, description: "Second highest in India.", image_url: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800" },
+    { id: 117, name: "Barabati Fort", state: "Odisha", category: "Forts", rating: 4.5, lat: 20.4800, lng: 85.8800, description: "Historic fort in Cuttack.", image_url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800" },
+    { id: 118, name: "Udayagiri Caves", state: "Odisha", category: "Heritage", rating: 4.7, lat: 20.2565, lng: 85.7832, description: "Ancient Jain caves.", image_url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800" },
+    { id: 119, name: "Khandagiri Caves", state: "Odisha", category: "Heritage", rating: 4.7, lat: 20.2560, lng: 85.7820, description: "Historic meditation caves.", image_url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800" },
+    { id: 120, name: "Ansupa Lake", state: "Odisha", category: "Lakes", rating: 4.6, lat: 20.5000, lng: 85.6000, description: "Freshwater lake with scenic beauty.", image_url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" },
+    { id: 121, name: "Mahendragiri Hills", state: "Odisha", category: "Mountains", rating: 4.8, lat: 18.9167, lng: 84.3333, description: "Scenic hill with mythological importance.", image_url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+    { id: 122, name: "Niyamgiri Hills", state: "Odisha", category: "Mountains", rating: 4.7, lat: 19.4000, lng: 83.4000, description: "Sacred tribal hills.", image_url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+    { id: 123, name: "Duduma Waterfall", state: "Odisha", category: "Waterfalls", rating: 4.8, lat: 18.9050, lng: 82.7120, description: "Majestic waterfall.", image_url: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800" },
+    { id: 124, name: "Joranda Waterfall", state: "Odisha", category: "Waterfalls", rating: 4.7, lat: 21.9330, lng: 86.3830, description: "Located inside Simlipal.", image_url: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800" },
+    { id: 125, name: "Raghurajpur Village", state: "Odisha", category: "Heritage", rating: 4.8, lat: 19.8870, lng: 85.8230, description: "Famous art village.", image_url: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800" },
+    { id: 126, name: "Pipili Village", state: "Odisha", category: "Heritage", rating: 4.6, lat: 19.8000, lng: 85.8300, description: "Known for applique crafts.", image_url: "https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=800" },
+    { id: 127, name: "Dhauli Shanti Stupa", state: "Odisha", category: "Heritage", rating: 4.7, lat: 20.1926, lng: 85.8433, description: "Peace pagoda of Kalinga war.", image_url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800" },
+    { id: 128, name: "Satkosia Gorge", state: "Odisha", category: "Wildlife", rating: 4.7, lat: 20.5125, lng: 84.8625, description: "Scenic river gorge.", image_url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" },
+    { id: 129, name: "Debrigarh Sanctuary", state: "Odisha", category: "Wildlife", rating: 4.7, lat: 21.6500, lng: 83.8000, description: "Wildlife near Hirakud.", image_url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" },
+    { id: 130, name: "Satkosia Gorge", state: "Odisha", category: "Wildlife", rating: 4.7, lat: 20.5125, lng: 84.8625, description: "A scenic gorge on the Mahanadi River surrounded by forests.", image_url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" },
+    { id: 131, name: "Debrigarh Wildlife Sanctuary", state: "Odisha", category: "Wildlife", rating: 4.7, lat: 21.6500, lng: 83.8000, description: "A rich biodiversity zone near Hirakud Dam.", image_url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" },
+    { id: 132, name: "Kapilash Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 20.7000, lng: 85.6000, description: "Hilltop temple dedicated to Lord Shiva.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 133, name: "Taratarini Temple", state: "Odisha", category: "Temples", rating: 4.8, lat: 19.5000, lng: 84.9000, description: "One of the oldest Shakti Peethas.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 134, name: "Nrusinghanath Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 21.8500, lng: 83.9000, description: "Temple at the foothills of Gandhamardan hills.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 135, name: "Samaleswari Temple", state: "Odisha", category: "Temples", rating: 4.8, lat: 21.4669, lng: 83.9756, description: "Famous temple in Sambalpur.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 136, name: "Ramchandi Beach", state: "Odisha", category: "Beaches", rating: 4.6, lat: 19.9000, lng: 86.1000, description: "Beautiful beach near Konark.", image_url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" },
+    { id: 137, name: "Aryapalli Beach", state: "Odisha", category: "Beaches", rating: 4.5, lat: 19.2000, lng: 84.9000, description: "Calm and less crowded beach.", image_url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" },
+    { id: 138, name: "Sonapur Beach", state: "Odisha", category: "Beaches", rating: 4.6, lat: 19.1000, lng: 84.8000, description: "A hidden gem beach in Odisha.", image_url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" },
+    { id: 139, name: "Balimela Reservoir", state: "Odisha", category: "Lakes", rating: 4.6, lat: 18.2500, lng: 82.1000, description: "A scenic reservoir surrounded by hills.", image_url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" },
+    { id: 140, name: "Upper Kolab Dam", state: "Odisha", category: "Lakes", rating: 4.5, lat: 18.8000, lng: 82.7000, description: "A beautiful dam with scenic surroundings.", image_url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" },
+    { id: 141, name: "Gandhamardan Hills", state: "Odisha", category: "Mountains", rating: 4.7, lat: 21.8000, lng: 83.9000, description: "A biodiversity-rich hill range.", image_url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+    { id: 142, name: "Malayagiri Hills", state: "Odisha", category: "Mountains", rating: 4.6, lat: 21.5000, lng: 85.2000, description: "Popular trekking destination.", image_url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+    { id: 143, name: "Putudi Waterfall", state: "Odisha", category: "Waterfalls", rating: 4.6, lat: 19.4000, lng: 83.8000, description: "A scenic waterfall surrounded by greenery.", image_url: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800" },
+    { id: 144, name: "Khandahata Waterfall", state: "Odisha", category: "Waterfalls", rating: 4.5, lat: 21.7000, lng: 85.5000, description: "A hidden waterfall spot.", image_url: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=800" },
+    { id: 145, name: "Chausathi Yogini Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 20.2500, lng: 85.7500, description: "Circular temple dedicated to 64 yoginis.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 146, name: "Tikarpada Wildlife Sanctuary", state: "Odisha", category: "Wildlife", rating: 4.6, lat: 20.6000, lng: 84.8000, description: "Famous for crocodiles and river views.", image_url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800" },
+    { id: 147, name: "Karlapat Wildlife Sanctuary", state: "Odisha", category: "Wildlife", rating: 4.6, lat: 19.7000, lng: 83.2000, description: "Dense forest with diverse wildlife.", image_url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800" },
+    { id: 148, name: "Taptapani Hot Springs", state: "Odisha", category: "Heritage", rating: 4.6, lat: 19.5000, lng: 84.3000, description: "Natural hot water spring with medicinal properties.", image_url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800" },
+    { id: 149, name: "Naraj Barrage", state: "Odisha", category: "Lakes", rating: 4.5, lat: 20.4500, lng: 85.7500, description: "Scenic river barrage near Cuttack.", image_url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" },
+    { id: 150, name: "Bhattarika Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 20.6000, lng: 85.3000, description: "Temple on river bank with scenic beauty.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 151, name: "Chandipur Beach", state: "Odisha", category: "Beaches", rating: 4.7, lat: 21.4500, lng: 87.0000, description: "Unique beach where sea recedes up to 5 km.", image_url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" },
+    { id: 152, name: "Talasari Beach", state: "Odisha", category: "Beaches", rating: 4.6, lat: 21.6000, lng: 87.4000, description: "Peaceful beach near West Bengal border.", image_url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" },
+    { id: 153, name: "Harishankar Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 21.8500, lng: 83.9000, description: "Temple combined with waterfall and nature.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 154, name: "Beleswar Beach", state: "Odisha", category: "Beaches", rating: 4.5, lat: 19.9000, lng: 85.9000, description: "Quiet beach near Puri.", image_url: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800" },
+    { id: 155, name: "Hadagarh Dam", state: "Odisha", category: "Lakes", rating: 4.6, lat: 21.0000, lng: 86.0000, description: "A beautiful dam surrounded by forest.", image_url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" },
+    { id: 156, name: "Kuldiha Wildlife Sanctuary", state: "Odisha", category: "Wildlife", rating: 4.6, lat: 21.4000, lng: 86.6000, description: "Elephant reserve with forest trails.", image_url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800" },
+    { id: 157, name: "Pathani Samanta Planetarium", state: "Odisha", category: "Heritage", rating: 4.5, lat: 20.2700, lng: 85.8200, description: "Educational astronomy center in Bhubaneswar.", image_url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800" },
+    { id: 158, name: "Science Park Bhubaneswar", state: "Odisha", category: "Heritage", rating: 4.5, lat: 20.3000, lng: 85.8200, description: "Interactive science exhibits and park.", image_url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800" },
+    { id: 159, name: "Ekamra Kanan", state: "Odisha", category: "Wildlife", rating: 4.5, lat: 20.3000, lng: 85.8000, description: "Botanical garden and park.", image_url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?w=800" },
+    { id: 160, name: "Bindu Sagar Lake", state: "Odisha", category: "Lakes", rating: 4.6, lat: 20.2400, lng: 85.8400, description: "Sacred lake near Lingaraj Temple.", image_url: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=800" },
+    { id: 161, name: "Gopalpur Lighthouse", state: "Odisha", category: "Heritage", rating: 4.5, lat: 19.2600, lng: 84.9200, description: "Historic lighthouse with sea views.", image_url: "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=800" },
+    { id: 162, name: "Chudanga Hills", state: "Odisha", category: "Mountains", rating: 4.5, lat: 20.3000, lng: 85.7000, description: "Small hill range near Bhubaneswar.", image_url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+    { id: 163, name: "Kali Temple Sambalpur", state: "Odisha", category: "Temples", rating: 4.6, lat: 21.4700, lng: 83.9700, description: "Famous Kali temple in Sambalpur.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 164, name: "Maa Ghanteswari Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 21.5500, lng: 83.9000, description: "Temple known for thousands of bells.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 165, name: "Huma Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 21.4700, lng: 83.8800, description: "Leaning temple dedicated to Shiva.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 166, name: "Bhagabati Temple Banapur", state: "Odisha", category: "Temples", rating: 4.6, lat: 19.7800, lng: 85.2000, description: "Famous temple in Banapur.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 167, name: "Satapada Dolphin Point", state: "Odisha", category: "Wildlife", rating: 4.8, lat: 19.7000, lng: 85.3000, description: "Famous for Irrawaddy dolphin sightings.", image_url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800" },
+    { id: 168, name: "Mangalajodi Bird Sanctuary", state: "Odisha", category: "Wildlife", rating: 4.9, lat: 19.9000, lng: 85.4000, description: "Paradise for bird watchers.", image_url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800" },
+    { id: 169, name: "Nalabana Bird Sanctuary", state: "Odisha", category: "Wildlife", rating: 4.8, lat: 19.8000, lng: 85.3000, description: "Core area of Chilika Lake for birds.", image_url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800" },
+    { id: 170, name: "Chilika Dolphin View Point", state: "Odisha", category: "Wildlife", rating: 4.7, lat: 19.7500, lng: 85.3500, description: "Best place to watch dolphins.", image_url: "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=800" },
+    { id: 171, name: "Parsurameswar Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 20.2400, lng: 85.8400, description: "One of the oldest temples in Bhubaneswar.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 172, name: "Brahmeswara Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 20.2500, lng: 85.8400, description: "Fine example of temple architecture.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 173, name: "Megheswar Temple", state: "Odisha", category: "Temples", rating: 4.6, lat: 20.2400, lng: 85.8300, description: "Historic temple with carvings.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 174, name: "Alarnath Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 19.8000, lng: 85.9000, description: "Important temple near Puri.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 175, name: "Charchika Temple", state: "Odisha", category: "Temples", rating: 4.7, lat: 20.3000, lng: 85.6000, description: "Famous Shakti temple.", image_url: "https://images.unsplash.com/photo-1584126307044-70e169c1050c?w=800" },
+    { id: 176, name: "Buguda Hill", state: "Odisha", category: "Mountains", rating: 4.5, lat: 19.8100, lng: 84.7900, description: "A scenic hill area with peaceful surroundings.", image_url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" },
+    { id: 177, name: "Mandasaru Gorge", state: "Odisha", category: "Mountains", rating: 4.6, lat: 20.5500, lng: 84.3000, description: "A hidden gorge with waterfalls and trekking trails.", image_url: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800" }
   ];
 
   /* ─── State ─── */
@@ -2321,8 +2401,9 @@
         </a>
       `;
     });
-    // Initialize Budget Estimator
-    updateBudget('budget');
+    // Initialize Budget Estimator with distance if available
+    openedDistance = p.distance || 0;
+    updateBudget(currentStyle);
 
     // Fetch Weather Data
     fetchWeather(p.lat, p.lng);
@@ -2403,10 +2484,12 @@
 
   /* ─── Budget Logic ─── */
   let currentStyle = 'budget';
+  let openedDistance = 0; // Globally track distance for current details
+
   const BUDGET_MODELS = {
-    budget:   { stay: 1200, food: 600,  travel: 500  },
-    standard: { stay: 4500, food: 1800, travel: 1200 },
-    luxury:   { stay: 18000,food: 5500, travel: 4500 }
+    budget:   { stay: 1200, food: 600,  travelBase: 200,  kmRate: 2   },
+    standard: { stay: 4500, food: 1800, travelBase: 1200, kmRate: 10  },
+    luxury:   { stay: 18000,food: 5500, travelBase: 4500, kmRate: 35  }
   };
 
   function updateBudget(style) {
@@ -2415,17 +2498,29 @@
     // Update tabs
     const tabs = ['budget','standard','luxury'];
     tabs.forEach(t => {
-      document.getElementById(`tab-${t}`).classList.toggle('active', t === style);
+      const tab = document.getElementById(`tab-${t}`);
+      if (tab) tab.classList.toggle('active', t === style);
     });
 
     const m = BUDGET_MODELS[style];
+    
+    // Dynamic Travel cost based on distance
+    const distFactor = Math.round(openedDistance * m.kmRate);
+    const finalTravel = m.travelBase + distFactor;
+    
     const format = (n) => '₹' + n.toLocaleString();
     
-    // Animate numbers (simple version)
+    // Update UI numbers
     document.getElementById('val-stay').textContent   = format(m.stay);
     document.getElementById('val-food').textContent   = format(m.food);
-    document.getElementById('val-travel').textContent = format(m.travel);
-    document.getElementById('val-total').textContent  = format(m.stay + m.food + m.travel);
+    document.getElementById('val-travel').textContent = format(finalTravel);
+    document.getElementById('val-total').textContent  = format(m.stay + m.food + finalTravel);
+    
+    // Tooltip/Visual aid for distance
+    const travelNote = document.getElementById('travel-note') || null;
+    if (travelNote) {
+      travelNote.textContent = openedDistance > 0 ? `Factoring in ${openedDistance.toFixed(1)} km journey` : "Based on local transport averages";
+    }
   }
 
   /* ─── Trip Planner Logic ─── */
@@ -2489,7 +2584,9 @@
 
     let total = 0;
     container.innerHTML = myTrip.map((p, i) => {
-      const dailyCost = BUDGET_MODELS[currentStyle].stay + BUDGET_MODELS[currentStyle].food + BUDGET_MODELS[currentStyle].travel;
+      const m = BUDGET_MODELS[currentStyle];
+      const dist = p.distance || 0;
+      const dailyCost = m.stay + m.food + (m.travelBase + Math.round(dist * m.kmRate));
       total += dailyCost;
       return `
         <div class="trip-item group p-4 rounded-3xl relative overflow-hidden">
@@ -2503,8 +2600,8 @@
                   <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
                 </button>
               </div>
-              <h4 class="text-white font-bold text-sm">${p.name}</h4>
-              <p class="text-[10px] text-slate-500 font-semibold uppercase tracking-wider">${p.state}</p>
+              <h4 class="text-white font-bold text-sm leading-tight">${p.name}</h4>
+              <p class="text-[9px] text-slate-500 font-semibold uppercase tracking-wider">${p.state} • ${dist > 0 ? dist.toFixed(0) + ' km away' : 'Local Area'}</p>
               <p class="text-xs font-black text-action-400 mt-2">Est. Day Cost: ₹${dailyCost.toLocaleString()}</p>
             </div>
           </div>
